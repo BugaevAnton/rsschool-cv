@@ -8,7 +8,7 @@
 I graduated from Vitebsk State Technological University. At the moment I am working at the front of Modern-Expo as a quality engineer and at the same time studying at the Rolling Scopes School. I hope the courses will help me gain useful knowledge.
 ### 4. Skills:
 - HTML&CSS
-- Git
+- GIT
 - JS
 ### 5. Code example
 `<meta charset="utf-8">
