@@ -1,74 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html> 
+<html lang="En">
 <head>
-	<meta charset="utf-8">
-	<title>rsschool-cv</title>
-	<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<link href="./Style.css" rel="stylesheet">
+<title>RS School</title>
+
 </head>
-<body>
-
-	<div class="wrapper">
-		<div class="aside"></div>
-		<div class="content">
-	<div class="block-left"></div>
-
-	<h1 class="underline">CV for Front-end developer position</h1>
-	<hr class="line">
-	<div>
-		<h2>1. My fullname is Anton Buhayou</h2>
-	</div>
-	<div>
-		<h2>2.  Contacts:</h2>
-	</div>
-	<div>
-		<ul>
-			<li>Anton Buhayou (Telegram)</li>
-			<li>buhayou.an@gmail.com</li>
-		</ul>
-	</div>
-	<div>
-		<h2>3. About Myself:</h2>
-	</div>
-	<div>
-		<p>I graduated from Vitebsk State Technological University. <br>
-		At the moment I am working at the front of Modern-Expo as a quality<br>
-	engineer and at the same time studying at the Rolling Scopes School. <br>
-	I hope the courses will help me gain useful knowledge.</p>
-	</div>
-	<div>
-		<h2>4. Skills:</h2>
-	</div>
-	<div>
-		<ul>
-		<li>HTML&CSS</li>
-		<li>Git</li>
-		<li>js</li>
-		</ul>
-	</div>	
-	<div>
-	<h2>5. Code example:</h2>
-		<code>  var a = prompt("введите число") var b = prompt("введите число") var c = a a = b b = c alert("Первое чилсо теперь" + a + "Второе число теперь" + b)  </code>
-	</div>
-	<div>
-		<h2>6. Courses:</h2>	
-	</div>
-	<div>
-		<p>Studying at Rolling Scopes School</p>
-	</div>
-	<div>
-		<h2>7. Education</h2>
-	</div>
-	<div>
-		<p>In 2011 he graduated from Vitebsk State Technological University as an engineer.</p>
-	</div>
-	<div>
-		<h2>8. English</h2>
-	</div>
-	<div>
-		<p>A (School and university education)</p>
+ <body>
 	
-</div>
-</div>
-</div>
-</body>
-</html>
+	
+	<header>
+
+		<div class="topnav">
+			<a class="active" href="#Contacts">Home</a>
+			<a href="#footer">News</a>
+			<a href="#aside">Contact</a>
+			<a href="#content">About</a>
+		</div>
+
+	  	<div class="flex">
+			<div class="name">
+			 	<h1>Anton Buhayou</h1>
+			 	<h2>Front-end developer</h2>
+			</div>
+		<div class="profil-photo">
+			<img src="./img/photo.png" alt="My photo">
+		</div>
+	 	</div>
+	</header>
+	 
+
+     <div id="aside">
+	 	<div class="Contacts">
+	 		<h2>Contacts</h2>
+		</div>
+		<ul class="contacts-list">
+			<li>anton(@1988)</li>
+			<li>+375336454632</li>
+			<li>Buhayou.an@gmail.com</li>
+			<li>Belarus, Vitebsk</li>
+		</ul>
+		<div class="Contacts"> 	
+			<h2>Skills</h2>
+		</div>
+		<ul>
+			<li>HTML</li>
+			<li>CSS</li>
+			<li>JS</li>
+		</ul>
+		<div class="Contacts">
+			<h2>Soft Skills</h2>
+		</div >	
+		<ul>
+			<li>Fast learner</li>
+			<li>Communicative</li>
+			<li>Creative</li>
+		</ul>
+
+		<div class="Contacts">
+			<h2>English</h2>
+		</div>	
+		<p class="lvl">Level: A2</p>
+	</div>
+
+     <div id="content">
+		<div class="Contacts"> 
+			<h2>About Me</h2>
+		</div>
+		<div class="about-me"> 
+			<p>I have good interpersonal skills, am an excellent team worker and very willing to learn and develop new skills.</p>
+				<p>I am reliable and dependable and often seek new responsibilities within a wide range of employment areas.</p>
+		<div class="Contacts">
+			<h2>Education</h2>
+		</div>	
+			<p>University:</p>	
+			<p>Vitebsk State Technological University</p>
+		</div>
+		<div class="Contacts">
+			<h3>Code Example</h3>
+		</div>	
+		<div>
+			<div class="code"> 
+				<pre class="hljs">
+var a = prompt("введите число")
+var b = prompt("введите число")
+var c = a
+a = b
+b = c
+alert("Первое чилсо теперь" + a + "Второе число теперь" + b)
+				</pre>
+			</div>
+		</div>
+		 </div>
+		
+		 <div id="footer">
+			<div class="footer-year">2022</div>
+			<div class="footer-github">
+				<a target="_blank" href="https://github.com/bugaevanton"><i class="fab fa-github"></i> <img alt="gitHub" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" width="60" height="60"></a>
+			</div>
+			<div class="footer-rsschool">
+			   <a target="_blank" href="https://rs.school/js/"> <img src="./img/svg/rs_school_js.svg" alt="RSSchool link" ></a>
+	   		</div>
+	 	</div>
+   </body>
+
+ </html>
