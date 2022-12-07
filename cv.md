@@ -11,7 +11,7 @@ I graduated from Vitebsk State Technological University. At the moment I am work
 - GIT
 - JS
 ### 5. Code example
-<meta charset="utf-8">
+`<meta charset="utf-8">
 <script>
 	var a = prompt("введите число")
 	var b = prompt("введите число")
@@ -19,7 +19,7 @@ I graduated from Vitebsk State Technological University. At the moment I am work
 	a = b
 	b = c
 	alert("Первое чилсо теперь" + a + "Второе число теперь" + b)
-</script>
+</script>`
 ### 6. 
 Studying at Rolling Scopes School
 ### 7. 
