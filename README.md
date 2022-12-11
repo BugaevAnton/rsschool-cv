@@ -1,1 +1,1 @@
-https://BugaevAnton.github.io/rsschool-cv/index.html
+https://BugaevAnton.github.io/rsschool-cv/
