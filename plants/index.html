@@ -8,13 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="img/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <title>Plants</title>
@@ -51,7 +51,19 @@
                             <a href="#Contacts" class="header_link">Contacts</a>
                         </li>
                     </ul>
+                    <div class="header_nav_close">
+                        <span class="header_close_line"></span>
+                        <span class="header_close_line"></span>
+                    </div>
                 </nav>
+                <div class="header_burger burger">
+                    <ul>
+                        <li class="burger_line burger_line_first"></li>
+                        <li class="burger_line burger_line_second"></li>
+                        <li class="burger_line burger_line_third"></li>
+                        <li class="burger_line burger_line_four"></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
@@ -91,39 +103,38 @@
                             <h2>Service and our projects</h2>
                         </div>
                         <div class="service_bloc_btn">
-                            <button class="service_btn_small">Gardens</button>
-                            <button class="service_btn_big">Lawn</button>
-                            <button class="service_btn_small">Planting</button>
+                            <button class="btn service_btn_small btn_gardens">Gardens</button>
+                            <button class="btn service_btn_big btn _lawn">Lawn</button>
+                            <button class="btn service_btn_small btn_planting">Planting</button>
                         </div>
                     </div>
                     <div class="service_cards">
-                        <div class="service_card">
+                        <div class="service_card garden_care">
                             <img src="./Img/first.jpg" alt="first" class="service_card_pic">
                             <p class="service_card_title">Garden care</p>
                             <p class="service_card_subtitle">Lorem Ipsum has been the industry</p>
                         </div>
-                      
-                        <div class="service_card">
+                        <div class="service_card planting">
                             <img src="./Img/second.jpg" alt="first" class="service_card_pic">
                             <p class="service_card_title">Planting</p>
                             <p class="service_card_subtitle">Lorem Ipsum has been the industry</p>
                         </div>
-                        <div class="service_card">
+                        <div class="service_card lawn_care">
                             <img src="./Img/three.jpg" alt="first" class="service_card_pic">
                             <p class="service_card_title">Lawn care</p>
                             <p class="service_card_subtitle">Lorem Ipsum has been the industry</p>
                         </div>
-                        <div class="service_card">
+                        <div class="service_card planting">
                             <img src="./Img/four.jpg" alt="first" class="service_card_pic">
                             <p class="service_card_title">Planting</p>
                             <p class="service_card_subtitle">Lorem Ipsum has been the industry</p>
                         </div>
-                        <div class="service_card">
+                        <div class="service_card garden_care">
                             <img src="./Img/five.jpg" alt="first" class="service_card_pic">
                             <p class="service_card_title">Garden care</p>
                             <p class="service_card_subtitle">Lorem Ipsum has been the industry</p>
                         </div>
-                        <div class="service_card">
+                        <div class="service_card planting">
                             <img src="./Img/six.jpg" alt="first" class="service_card_pic">
                             <p class="service_card_title">Planting</p>
                             <p class="service_card_subtitle">Lorem Ipsum has been the industry</p>
@@ -138,10 +149,47 @@
                     <div class="prices_block">
                         <h2 class="prices_block_intro">Prices</h2>
                         <div class="prices_block_tabl">
-                            <div class="prices_block_btn">
-                                <div class="prices_block_btns">
+                            <div class="accordion">
+                                <details class="accordion_item">
+                                    <summary class="accordion_title">Basics</summary>
+                                        <div class="accordion_open">
+                                            <p class="basic_open_line"></p>
+                                            <p class="basic_open_text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                            <p class="basic_open_price"><spen class="basic_open_orange">$15 </spen>/ per hour</p>
+                                            <button class="basic_open_btn">Order</button>
+                                        </div>
+                                </details>
+                                <details class="accordion_item">
+                                    <summary class="accordion_title">Standard</summary>
+                                        <div class="accordion_open">
+                                            <p class="basic_open_line"></p>
+                                            <p class="basic_open_text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                            <p class="basic_open_price"><spen class="basic_open_orange">$25 </spen>/ per hour</p>
+                                            <button class="basic_open_btn">Order</button>
+                                        </div>
+                                </details>
+                                <details class="accordion_item">
+                                    <summary class="accordion_title">Pro care</summary>
+                                        <div class="accordion_open">
+                                            <p class="basic_open_line"></p>
+                                            <p class="basic_open_text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                            <p class="basic_open_price"><spen class="basic_open_orange">$35 </spen>/ per hour</p>
+                                            <button class="basic_open_btn">Order</button>
+                                        </div>
+                                </details>
+                                <!--<div class="prices_block_btns">
                                     <p class="prices_block_tabl_more">Basics</p>
                                     <img src="./Img/Svg/accordion_btn.svg" alt="Basics" class="prices_block_tabl_acc">
+                                    <div class="basic_open">
+                                        <div class="basic_open_block">
+                                            <p class="basic_open_name">Basics</p>
+                                            <img src="../тщву/Plants/Img/Svg/accordion_btnOpen.svg" alt="open">
+                                        </div>                                    
+                                        <p class="basic_open_line"></p>
+                                        <p class="basic_open_text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                        <p class="basic_open_price"><spen class="basic_open_orange">$15 </spen>/ per hour</p>
+                                        <button class="basic_open_btn">Order</button>
+                                    </div>
                                 </div>
                                 <div class="prices_block_btns">
                                     <p class="prices_block_tabl_more">Standard</p>
@@ -151,13 +199,14 @@
                                     <p class="prices_block_tabl_more">Pro care</p>
                                     <img src="./Img/Svg/accordion_btn.svg" alt="Pro care" class="prices_block_tabl_acc">
                                 </div>
+                            -->
                             </div>
                         </div>
                     </div>
                     <div class="prices_block_our">
                         <p class="prices_block_our_intro">Our best <span class="color_green">gardeners</span> are ready to help you</p>
                         <button class="prices_block_our_btn">Contact us</button>
-                        <div>
+                        <div class="prices_block_leafs">
                             <img src="./Img/PNG/leafs-small.png" alt="leafs-small">
                         </div>
                     </div>
