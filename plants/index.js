@@ -1,30 +1,4 @@
-const point1 = '1 10\n';
-const point2 = '2 20\n';
-const point3 = '3 48\n';
-const point4 = '4 12\n';
-const point5 = '5 20\n';
-
-console.log(point1, point2, point3, point4, point5);
-(function (){
-    const burgerItem = document.querySelector('.burger');
-    const menu = document.querySelector('.header_nav');
-    const menuCloseItem = document.querySelector('.header_nav_close, .header_nav');
-    const menuLinks = document.querySelectorAll('.header_link');
-    burgerItem.addEventListener('click', () => {
-        menu.classList.add('header_nav_active');
-    });
-    menuCloseItem.addEventListener('click' , () => {
-        menu.classList.remove('header_nav_active')
-    });
-    if (window.innerWidth <= 380)  {
-        for (let i = 0; i < menuLinks.length; i += 1) {
-            menuLinks[i].addEventListener('click', () => {
-                menu.classList.remove('header_nav_active')
-            });
-        }
-    }
-}());
-
+//Start Blur//
 (function (){
     const [btnGardens,btnLawn,btnPlanting] = document.querySelectorAll('.btn');
     const planting = document.querySelectorAll('.planting');
@@ -67,4 +41,68 @@ function clearElements (elements) {
         elements[i].classList.remove('blur');
     }
 }
+//End Blur//
+
+
+//select btn start//
+const optionMenu = document.querySelector('.select-menu'),
+        selectBtn = optionMenu.querySelector('.select-btn'),
+        options = optionMenu.querySelectorAll('.option'),
+        Btn_text = optionMenu.querySelector('.Btn_text'),
+        optiontext = optionMenu.querySelector('.option-text'),
+        card = document.querySelector('.contacts_cards_active');
+
+selectBtn.addEventListener('click', () => optionMenu.classList.toggle('active'));
+
+optiontext.addEventListener('click', () => card.classList.add('card'));
+
+options.forEach(option =>{
+    option.addEventListener('click', ()=>{
+        let selectedOption = option.querySelector('.option-text').innerText;
+        Btn_text.innerText = selectedOption;
+
+        optionMenu.classList.toggle('active');
+    })
+})
+//select btn end//
+
+//accordion start//
+document.querySelectorAll('.accordion_item_trigger').forEach((item) =>
+    item.addEventListener('click', () => {
+        const parent = item.parentNode;
+
+        if (parent.classList.contains('accordion_item--active')) {
+            parent.classList.remove('accordion_item--active');
+        } else {
+            document
+                .querySelectorAll('.accordion_item')
+                .forEach((child) => child.classList.remove('accordion_item--active'))
+
+            parent.classList.add('accordion_item--active');
+        }
+
+    })
+)
+//accordion end
+
+
+(function (){
+    const burgerItem = document.querySelector('.burger');
+    const menu = document.querySelector('.header_nav');
+    const menuCloseItem = document.querySelector('.header_nav_close, .header_nav');
+    const menuLinks = document.querySelectorAll('.header_link');
+    burgerItem.addEventListener('click', () => {
+        menu.classList.add('header_nav_active');
+    });
+    menuCloseItem.addEventListener('click' , () => {
+        menu.classList.remove('header_nav_active')
+    });
+    if (window.innerWidth <= 380)  {
+        for (let i = 0; i < menuLinks.length; i += 1) {
+            menuLinks[i].addEventListener('click', () => {
+                menu.classList.remove('header_nav_active')
+            });
+        }
+    }
+}());
 
