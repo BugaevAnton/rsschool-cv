@@ -529,6 +529,9 @@ h6{
     margin-right: 64px;
 }
 /*cards city info*/
+.hidden{
+    visibility: hidden;
+}
 .contacts_cards{
     width: 448px;
     background: #EDF2EC;
@@ -537,7 +540,7 @@ h6{
     position: absolute;
     top: 240px;
     right: 0px;
-    display: none;
+    
 }
 .contacts_card{
     display: flex;
@@ -578,6 +581,7 @@ h6{
     line-height: 13px;
     text-align: center;
     color: #717171;
+    cursor: pointer;
 }
 /*Select menu!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .select_contacts_select{
@@ -1170,6 +1174,3 @@ h6{
         right: 15px;
     }
 } 
-.active {
-    
-}
