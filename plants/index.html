@@ -203,56 +203,23 @@
                         <div class="select-btn">
                             <span class="Btn_text">City</span><span class="arrow"></span>
                         </div>
-                        <ul class="options">
-                            <li class="option">
-                                <span class="option-text">Canandaigua, NY</span>
+                        <ul class="options" id="list">
+                            <li class="option item" data-city="Canandaigua, NY" data-phone="+15853930001" data-street="151 Charlotte Street">
+                                <span class="option-text" >Canandaigua, NY</span>
                             </li>
-                            <li class="option">
-                                <span class="option-text">New York City</span>
+                            <li class="option item" data-city="New York City" data-phone="+12124560002" data-street="9 East 91st Street">
+                                <span class="option-text" >New York City</span>
                             </li>
-                            <li class="option">
-                                <span class="option-text">Yonkers, NY</span>
+                            <li class="option item" data-city="Yonkers, NY" data-phone="+19146780003" data-street="511 Warburton Ave">
+                                <span class="option-text" >Yonkers, NY</span>
                             </li>
-                            <li class="option">
-                                <span class="option-text">Sherrill, NY</span>
+                            <li class="option item" data-city="Sherrill, NY" data-phone="+13159080004" data-street="14 WEST Noyes BLVD">
+                                <span class="option-text" >Sherrill, NY</span>
                             </li>
                         </ul>
                     </div>
-                    <div class="contacts_cards">
-                        <div class="contacts_cards">
-                            <div class="contacts_card">
-                                <div class="contacts_card_item">
-                                    <p>City:</p>
-                                    <p>Phone:</p>
-                                    <p>Office adress:</p>
-                                </div>
-                                <div class="contacts_card_info">
-                                    <p>Canandaigua, NY</p>
-                                    <p>+1	585	393 0001</p>
-                                    <p>151 Charlotte Street</p>
-                                </div>
-                            </div>
-                            <div class="contacts_card_btn">
-                                <button class="contacts_card_call">Call us</button>
-                            </div>
-                        </div>
-                        <div class="contacts_cards">
-                            <div class="contacts_card">
-                                <div class="contacts_card_item">
-                                    <p>City:</p>
-                                    <p>Phone:</p>
-                                    <p>Office adress:</p>
-                                </div>
-                                <div class="contacts_card_info">
-                                    <p>New York City</p>
-                                    <p>+1	212	456 0002</p>
-                                    <p>9 East 91st Street</p>
-                                </div>
-                            </div>
-                            <div class="contacts_card_btn">
-                                <button class="contacts_card_call">Call us</button>
-                            </div>
-                        </div>
+                    
+                    <div class="contacts_cards hidden" >
                         <div class="contacts_card">
                             <div class="contacts_card_item">
                                 <p>City:</p>
@@ -260,33 +227,15 @@
                                 <p>Office adress:</p>
                             </div>
                             <div class="contacts_card_info">
-                                <p>Yonkers, NY</p>
-                                <p>+1	914	678 0003</p>
-                                <p>511 Warburton Ave</p>
+                                <p id="city">   </p>
+                                <p id="phone">   </p>
+                                <p id="street">   </p>
                             </div>
                         </div>
                         <div class="contacts_card_btn">
-                            <button class="contacts_card_call">Call us</button>
+                            <a class="contacts_card_call" href="tel:+1585393 0001">Call us</a>
                         </div>
                     </div>
-                    <div class="contacts_cards">
-                        <div class="contacts_card">
-                            <div class="contacts_card_item">
-                                <p>City:</p>
-                                <p>Phone:</p>
-                                <p>Office adress:</p>
-                            </div>
-                            <div class="contacts_card_info">
-                                <p>Sherrill, NY</p>
-                                <p>+1	315	908 0004</p>
-                                <p>14 WEST Noyes BLVD</p>
-                            </div>
-                        </div>
-                        <div class="contacts_card_btn">
-                            <button class="contacts_card_call">Call us</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     </main>
