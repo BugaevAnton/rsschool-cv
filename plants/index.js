@@ -50,20 +50,50 @@ const optionMenu = document.querySelector('.select-menu'),
         options = optionMenu.querySelectorAll('.option'),
         Btn_text = optionMenu.querySelector('.Btn_text'),
         optiontext = optionMenu.querySelector('.option-text'),
-        card = document.querySelector('.contacts_cards_active');
+        card = document.querySelector('.contacts_cards_active'),
+       
+        contacts_cards = document.querySelector('.contacts_cards');
+        
+
 
 selectBtn.addEventListener('click', () => optionMenu.classList.toggle('active'));
 
-optiontext.addEventListener('click', () => card.classList.add('card'));
+//optiontext.addEventListener('click', () => contacts_cards.classList.toggle('hidden'));
+
 
 options.forEach(option =>{
     option.addEventListener('click', ()=>{
         let selectedOption = option.querySelector('.option-text').innerText;
         Btn_text.innerText = selectedOption;
-
+        
         optionMenu.classList.toggle('active');
     })
 })
+
+    const list = document.getElementById('list');
+    const listItems = document.querySelectorAll('.item');
+    const cardCity = document.getElementById('city');
+    const cardPhone = document.getElementById('phone');
+    const cardStreet = document.getElementById('street');
+
+    let city;
+    let phone;
+    let street;
+
+    listItems.forEach( item => {
+        item.addEventListener('click', () => {
+            city = item.dataset.city;
+            phone = item.dataset.phone;
+            street = item.dataset.street;
+            //item.classList.toggle('.hidden');
+            contacts_cards.classList.toggle('hidden')
+
+            cardCity.innerText = city;
+            cardPhone.innerText = phone;
+            cardStreet.innerText = street;
+        })
+    })
+
 //select btn end//
 
 //accordion start//
@@ -85,7 +115,7 @@ document.querySelectorAll('.accordion_item_trigger').forEach((item) =>
 )
 //accordion end
 
-
+//Burger start
 (function (){
     const burgerItem = document.querySelector('.burger');
     const menu = document.querySelector('.header_nav');
@@ -105,4 +135,4 @@ document.querySelectorAll('.accordion_item_trigger').forEach((item) =>
         }
     }
 }());
-
+//Burger end
