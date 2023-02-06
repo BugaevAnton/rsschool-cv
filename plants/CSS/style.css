@@ -239,7 +239,7 @@ h6{
 }
 .blur {
     filter: blur(2px);
-    
+    transition: 1.5s;
 }
 .btn:disabled {
     color: #717171;
@@ -353,7 +353,6 @@ h6{
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 40px;
-    padding-bottom: 115px;
 }
 .prices_block_intro{
     max-width: 135px;
@@ -470,6 +469,7 @@ h6{
 }
 .prices_block_our{
     text-align: right;
+    margin-bottom: 115px;
 }
 .prices_block_our_intro{
     max-width: 452px;
@@ -538,9 +538,8 @@ h6{
     border: 1px solid #000000;
     border-radius: 20px;
     position: absolute;
-    top: 240px;
+    top: 246px;
     right: 0px;
-    
 }
 .contacts_card{
     display: flex;
@@ -1174,3 +1173,6 @@ h6{
         right: 15px;
     }
 } 
+.active {
+    
+}
