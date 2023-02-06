@@ -56,7 +56,10 @@ const optionMenu = document.querySelector('.select-menu'),
         
 
 
-selectBtn.addEventListener('click', () => optionMenu.classList.toggle('active'));
+selectBtn.addEventListener('click', () => {
+                optionMenu.classList.toggle('active')
+                contacts_cards.classList.add('hidden')
+            });
 
 //optiontext.addEventListener('click', () => contacts_cards.classList.toggle('hidden'));
 
