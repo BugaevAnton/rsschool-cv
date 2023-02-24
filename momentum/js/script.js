@@ -53,23 +53,24 @@ showGreeting()
 // greating end
 
 const userName = document.querySelector(".name");
-
+const city = document.querySelector(".city");
 function setLocalStorage() {
-    localStorage.setItem("name", userName.value);
-  }
+    localStorage.setItem ("name", userName.value);
+    }
   window.addEventListener("beforeunload", setLocalStorage)
   
   function getLocalStorage() {
+    // city.value = 'Minsk';
     if(localStorage.getItem("name")) {
         userName.value = localStorage.getItem("name");
     }
   }
-  window.addEventListener("load", getLocalStorage)
+  window.addEventListener("DOMContentLoaded", getLocalStorage)
 //   document.addEventListener("DOMContentLoaded", getLocalStorage);
 //   setLocalStorage()
 //   getLocalStorage()
 
-// change background
+// change background start
 function getRandomNum() {
     return Math.floor(Math.random() * (21 - 1)) + 1;
 }
@@ -88,7 +89,6 @@ setBG();
 
 const next = document.querySelector('.slide-next');
 const prev = document.querySelector('.slide-prev');
-
 
 next.addEventListener("click", getSlideNext)
 prev.addEventListener("click", getSlidePrev)
@@ -111,3 +111,78 @@ function getSlidePrev() {
     }
     setBG()
 }
+// change background end
+
+// weather start
+    // const city = document.querySelector('.city');
+    const wind = document.querySelector('.wind');
+    const humidity = document.querySelector('.humidity');
+    const weatherIcon = document.querySelector('.weather-icon');
+    const temperature = document.querySelector('.temperature');
+    const weatherDescription = document.querySelector('.weather-description');
+    // const weatherError = document.querySelector('.weather-error') //Что с ним сделать чтоб правильно заработал?
+
+    async function getWeather() {  
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=eng&appid=08f2a575dda978b9c539199e54df03b0&units=metric `;
+        const res = await fetch(url);
+        const data = await res.json(); 
+        if(data.cod !='200') {
+            weatherError.textContent = `Error! City not found of for '${city.value}'!` // Что с ним сделать чтоб правильно заработал?
+        };
+        // console.log(data.weather[0].id, data.weather[0].description, data.main.temp, data.main.humidity);
+        weatherIcon.className = 'weather-icon owf';
+        weatherIcon.classList.add(`owf-${data.weather[0].id}`);
+        temperature.textContent = `${data.main.temp.toFixed(0)}°C`;
+        weatherDescription.textContent = data.weather[0].description;
+        wind.textContent = `wind speed: ${data.wind.speed.toFixed(0)}m/s`;
+        humidity.textContent = `Humidity: ${data.main.humidity}%`;
+        
+    }
+    // getWeather()
+    function setCity(event) {
+        if (event.code === 'Enter') {
+            city.blur();
+            getWeather();
+        }
+    }
+    
+    city.addEventListener('change',()=>{getWeather(city)});
+    document.addEventListener('DOMContentLoaded', getWeather);
+
+    function setCityLocalStorage() {
+        localStorage.setItem ("city", city.value);
+        }
+      window.addEventListener("beforeunload", setCityLocalStorage)
+      
+      function getCityLocalStorage() {
+        city.value = 'Minsk';
+        if(localStorage.getItem("city")) {
+            city.value = localStorage.getItem("city");
+        }
+      }
+      window.addEventListener("load", getCityLocalStorage)
+//weather end
+
+//quote start
+const changeQuote = document.querySelector('.change-quote');
+const quote = document.querySelector('.quote');
+const author = document.querySelector('.author');
+
+function getRandomNum() {
+    const numRandom = Math.floor(Math.random() * 10) + 1;
+    return numRandom;
+}
+    
+async function getQuotes() {  
+    const quotes = 'data.json';
+    const res = await fetch(quotes);
+    const data = await res.json(); 
+    const random = getRandomNum();
+
+    quote.textContent = data[random].text
+    author.textContent = data[random].author
+}
+getQuotes();
+changeQuote.addEventListener("click", getQuotes);
+  
+//quote end
