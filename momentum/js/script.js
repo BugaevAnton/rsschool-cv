@@ -122,24 +122,37 @@ function getSlidePrev() {
     const weatherIcon = document.querySelector('.weather-icon');
     const temperature = document.querySelector('.temperature');
     const weatherDescription = document.querySelector('.weather-description');
-    // const weatherError = document.querySelector('.weather-error') //Что с ним сделать чтоб правильно заработал?
-
+    const weatherError = document.querySelector('.weather-error') //Что с ним сделать чтоб правильно заработал?
+    
     async function getWeather() {  
+        console.log(city.value);
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=eng&appid=08f2a575dda978b9c539199e54df03b0&units=metric `;
         const res = await fetch(url);
         const data = await res.json(); 
-        if(data.cod !='200') {
-            weatherError.textContent = `Error! City not found of for '${city.value}'!` // Что с ним сделать чтоб правильно заработал?
-        };
-        // console.log(data.weather[0].id, data.weather[0].description, data.main.temp, data.main.humidity);
-        weatherIcon.className = 'weather-icon owf';
-        weatherIcon.classList.add(`owf-${data.weather[0].id}`);
-        temperature.textContent = `${data.main.temp.toFixed(0)}°C`;
-        weatherDescription.textContent = data.weather[0].description;
-        wind.textContent = `wind speed: ${data.wind.speed.toFixed(0)}m/s`;
-        humidity.textContent = `Humidity: ${data.main.humidity}%`;
+        city.placeholder = '[Enter city]';
+        console.log(data)
         
+        weatherIcon.className = 'weather-icon owf';
+        try {
+            weatherIcon.classList.add(`owf-${data.weather[0].id}`);
+            temperature.textContent = `${data.main.temp.toFixed(0)}°C`;
+            weatherDescription.textContent = data.weather[0].description;
+            wind.textContent = `wind speed: ${data.wind.speed.toFixed(0)}m/s`;
+            humidity.textContent = `Humidity: ${data.main.humidity}%`;
+            weatherError.textContent = '';
+        } catch (err) {
+            weatherError.textContent = `Error! City not found of for '${city.value}'!`;
+            temperature.textContent = '';
+            weatherDescription.textContent = ''; 
+            wind.textContent = '';
+            humidity.textContent = '';
+        }
+        // if(data.cod !='200') {
+        //     weatherError.textContent = `Error! City not found of for '${city.value}'!` // Что с ним сделать чтоб правильно заработал?
+        // } 
+        // console.log(data.weather[0].id, data.weather[0].description, data.main.temp, data.main.humidity);
     }
+    
     // getWeather()
     function setCity(event) {
         if (event.code === 'Enter') {
@@ -157,12 +170,21 @@ function getSlidePrev() {
       window.addEventListener("beforeunload", setCityLocalStorage)
       
       function getCityLocalStorage() {
-        city.value = 'Minsk';
         if(localStorage.getItem("city")) {
             city.value = localStorage.getItem("city");
+            console.log(city.value)
+        } else {
+            city.value = 'Minsk';
         }
       }
-      window.addEventListener("load", getCityLocalStorage)
+
+      function setweather() {
+        getCityLocalStorage();
+        getWeather(); //здесь не было функции, мучился !!!!!!!!!!!!!!!!!!!1
+      }
+
+      window.addEventListener("load", setweather);
+      
 //weather end
 
 //quote start
@@ -190,13 +212,15 @@ changeQuote.addEventListener("click", getQuotes);
 
 //audio start
 
+// import playList from "./playList.js";
+//     console.log(playList);
+
 const playBtn = document.querySelector('.play');
 const audio = new Audio();
 let playNum = 0;
 let isPlay = false;
 
-    // import playList from './playList.js';
-    // console.log(playList);
+    
 
 function playAudio() {
     audio.src = './assets/sounds/Aqua%20Caelestis.mp3';
