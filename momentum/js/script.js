@@ -1,3 +1,5 @@
+
+
 // time start
 const time = document.querySelector('.time')
 // console.log(currentTime);
@@ -173,7 +175,7 @@ function getRandomNum() {
     return numRandom;
 }
     
-async function getQuotes() {  
+async function getQuotes() {
     const quotes = 'data.json';
     const res = await fetch(quotes);
     const data = await res.json(); 
@@ -184,5 +186,31 @@ async function getQuotes() {
 }
 getQuotes();
 changeQuote.addEventListener("click", getQuotes);
-  
 //quote end
+
+//audio start
+
+const playBtn = document.querySelector('.play');
+const audio = new Audio();
+let playNum = 0;
+let isPlay = false;
+
+    // import playList from './playList.js';
+    // console.log(playList);
+
+function playAudio() {
+    audio.src = './assets/sounds/Aqua%20Caelestis.mp3';
+    audio.currentTime = 0;
+    if (!isPlay) {
+        isPlay = true;
+        audio.play();
+        playBtn.classList.add('pause');
+    } else {
+        isPlay = false;
+        audio.pause();
+        playBtn.classList.remove('pause');
+    }
+}
+playBtn.addEventListener('click', playAudio);
+
+//audio end
