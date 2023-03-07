@@ -16,7 +16,7 @@ I graduated from Vitebsk State Technological University. At the moment I am work
 	var a = prompt("введите число")
 	var b = prompt("введите число")
 	var c = a;
-	a = b
+	a = b;
 	b = c
 	alert("Первое чилсо теперь" + a + "Второе число теперь" + b)
 </script>`
