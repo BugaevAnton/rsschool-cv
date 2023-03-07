@@ -7,9 +7,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <title>Plants</title>
-    <link rel="shortcut icon" href="./favicon/favicon-16x16.png">
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <title>Plants</title>
 </head>
 <body>
     <header class="header">
@@ -142,56 +150,34 @@
                         <h2 class="prices_block_intro">Prices</h2>
                         <div class="prices_block_tabl">
                             <div class="accordion">
-                                <details class="accordion_item">
-                                    <summary class="accordion_title">Basics</summary>
-                                        <div class="accordion_open">
-                                            <p class="basic_open_line"></p>
-                                            <p class="basic_open_text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
-                                            <p class="basic_open_price"><spen class="basic_open_orange">$15 </spen>/ per hour</p>
-                                            <button class="basic_open_btn">Order</button>
-                                        </div>
-                                </details>
-                                <details class="accordion_item">
-                                    <summary class="accordion_title">Standard</summary>
-                                        <div class="accordion_open">
-                                            <p class="basic_open_line"></p>
-                                            <p class="basic_open_text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
-                                            <p class="basic_open_price"><spen class="basic_open_orange">$25 </spen>/ per hour</p>
-                                            <button class="basic_open_btn">Order</button>
-                                        </div>
-                                </details>
-                                <details class="accordion_item">
-                                    <summary class="accordion_title">Pro care</summary>
-                                        <div class="accordion_open">
-                                            <p class="basic_open_line"></p>
-                                            <p class="basic_open_text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
-                                            <p class="basic_open_price"><spen class="basic_open_orange">$35 </spen>/ per hour</p>
-                                            <button class="basic_open_btn">Order</button>
-                                        </div>
-                                </details>
-                                <!--<div class="prices_block_btns">
-                                    <p class="prices_block_tabl_more">Basics</p>
-                                    <img src="./Img/Svg/accordion_btn.svg" alt="Basics" class="prices_block_tabl_acc">
-                                    <div class="basic_open">
-                                        <div class="basic_open_block">
-                                            <p class="basic_open_name">Basics</p>
-                                            <img src="../тщву/Plants/Img/Svg/accordion_btnOpen.svg" alt="open">
-                                        </div>                                    
-                                        <p class="basic_open_line"></p>
-                                        <p class="basic_open_text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
-                                        <p class="basic_open_price"><spen class="basic_open_orange">$15 </spen>/ per hour</p>
-                                        <button class="basic_open_btn">Order</button>
+                                <div class="accordion_item">                                    
+                                    <div class="accordion_item_trigger">Basics</div><span class="arrow"></span>
+                                
+                                    <div class="accordion_item_content">
+                                        <p class="accordion_item_line"></p>
+                                        <p class="accordion_item_text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                        <p class="accordion_item_price"><spen class="basic_open_orange">$15 </spen> / per hour</p>
+                                        <a href="#Contacts" class="accordion_item_btn">Order</a>
                                     </div>
                                 </div>
-                                <div class="prices_block_btns">
-                                    <p class="prices_block_tabl_more">Standard</p>
-                                    <img src="./Img/Svg/accordion_btn.svg" alt="Standard" class="prices_block_tabl_acc">
+                                <div class="accordion_item">
+                                    <div class="accordion_item_trigger">Standard</div><span class="arrow"></span>
+                                    <div class="accordion_item_content">
+                                        <p class="accordion_item_line"></p>
+                                        <p class="accordion_item_text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                        <p class="accordion_item_price"><spen class="basic_open_orange">$25 </spen> / per hour</p>
+                                        <a href="#Contacts" class="accordion_item_btn">Order</a>
+                                    </div>
                                 </div>
-                                <div class="prices_block_btns">
-                                    <p class="prices_block_tabl_more">Pro care</p>
-                                    <img src="./Img/Svg/accordion_btn.svg" alt="Pro care" class="prices_block_tabl_acc">
+                                <div class="accordion_item">
+                                    <div class="accordion_item_trigger">Pro care</div><span class="arrow"></span>
+                                    <div class="accordion_item_content">
+                                        <p class="accordion_item_line"></p>
+                                        <p class="accordion_item_text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                        <p class="accordion_item_price"><spen class="basic_open_orange">$35 </spen> / per hour</p>
+                                        <a href="#Contacts" class="accordion_item_btn">Order</a>
+                                    </div>
                                 </div>
-                            -->
                             </div>
                         </div>
                     </div>
@@ -212,11 +198,43 @@
                         <img src="./Img/PNG/contact_woman1.png" alt="contact_woman">
                     </div>
                     <h2 class="contacts_title">Contact us</h2>
-                    <div class="contacts_btn">
-                        <p class="contacts_btn_info">City</p>
-                        <img src="./Img/Svg/accordion_btndark.svg" alt="accordion_btn" class="contacts_btn_pic">
+                    
+                    <div class="select-menu">
+                        <div class="select-btn">
+                            <span class="Btn_text">City</span><span class="arrow"></span>
+                        </div>
+                        <ul class="options" id="list">
+                            <li class="option item" data-city="Canandaigua, NY" data-phone="+15853930001" data-street="151 Charlotte Street">
+                                <span class="option-text" >Canandaigua, NY</span>
+                            </li>
+                            <li class="option item" data-city="New York City" data-phone="+12124560002" data-street="9 East 91st Street">
+                                <span class="option-text" >New York City</span>
+                            </li>
+                            <li class="option item" data-city="Yonkers, NY" data-phone="+19146780003" data-street="511 Warburton Ave">
+                                <span class="option-text" >Yonkers, NY</span>
+                            </li>
+                            <li class="option item" data-city="Sherrill, NY" data-phone="+13159080004" data-street="14 WEST Noyes BLVD">
+                                <span class="option-text" >Sherrill, NY</span>
+                            </li>
+                        </ul>
                     </div>
-                </div>
+                    <div class="contacts_cards hidden">
+                        <div class="contacts_card">
+                            <div class="contacts_card_item">
+                                <p>City:</p>
+                                <p>Phone:</p>
+                                <p>Office adress:</p>
+                            </div>
+                            <div class="contacts_card_info">
+                                <p id="city">   </p>
+                                <p id="phone">   </p>
+                                <p id="street">   </p>
+                            </div>
+                        </div>
+                        <div class="contacts_card_btn">
+                            <a class="contacts_card_call" href="tel:+1585393 0001">Call us</a>
+                        </div>
+                    </div>
             </div>
         </section>
     </main>
