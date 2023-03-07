@@ -1,1 +1,1 @@
-https://BugaevAnton.github.io/rsschool-cv/momentum/index
+https://BugaevAnton.github.io/rsschool-cv/cv.md
