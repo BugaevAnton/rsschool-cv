@@ -189,6 +189,7 @@ const city = document.querySelector(".city");
 //weather end
 
 //quote start
+
 const changeQuote = document.querySelector('.change-quote');
 const quote = document.querySelector('.quote');
 const author = document.querySelector('.author');
@@ -199,9 +200,9 @@ function getRandomNumQ() {
 }
     
 async function getQuotes() {
-    const quotes = 'data.json';
-    const res = await fetch(quotes);
-    const data = await res.json(); 
+    // const quotes = 'data.json';
+    // const res = await fetch(quotes);
+    // const data = await res.json(); 
     const random = getRandomNumQ();
 
     quote.textContent = data[random].text
@@ -209,6 +210,8 @@ async function getQuotes() {
 }
 getQuotes();
 changeQuote.addEventListener("click", getQuotes);
+
+
 //quote end
 
 //audio start

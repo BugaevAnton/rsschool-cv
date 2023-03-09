@@ -4,3 +4,5 @@ export const LOCAL_STORAGE_KEY = {
     WEATHER: "WEATHER",
     IMAGE_NUM: "IMAGE_NUM"
 }
+
+export const DEFAULT_CITY = 'Minsk';
