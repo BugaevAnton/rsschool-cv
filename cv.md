@@ -13,7 +13,7 @@ I graduated from Vitebsk State Technological University. At the moment I am work
 ### 5. Code example
 `<meta charset="utf-8">
 <script>
-	var a = prompt("введите число")
+	var a = prompt("введите число");
 	var b = prompt("введите число")
 	var c = a
 	a = b
