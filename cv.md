@@ -23,6 +23,6 @@ I graduated from Vitebsk State Technological University. At the moment I am work
 ### 6. 
 Studying at Rolling Scopes School.
 ### 7. 
-In 2011 he graduated from Vitebsk State Technological University as an engineer.
+In 2011 he graduated from Vitebsk State Technological University as an engineer
 ### 8.
 A (School and university education)
